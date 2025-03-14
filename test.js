@@ -8,12 +8,12 @@ const bundler = new BundlerSDK('https://upload.onchain.rs/', process.env.API_KEY
 
 async function main() {
   try {
-    const fileBuffer = await readFile('images/milady.png');
+    const fileBuffer = await readFile('files/hearts.gif');
     const txHash = await bundler.upload([
       {
         file: fileBuffer,
         tags: {
-          'content-type': 'image/png',
+          'content-type': 'image/gif',
         }
       }
     ]);
